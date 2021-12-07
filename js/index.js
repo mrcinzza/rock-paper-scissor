@@ -10,8 +10,16 @@ function playRound(playerSelection, computerSelection) {
         console.log('You win!');
     } else if (playerSelection === opts[0] && computerSelection === opts[1]) {
         console.log('You Loose!')
+    } else if (playerSelection === opts[1] && computerSelection === opts[2]) {
+        console.log('You Loose!')
+    } else if (playerSelection === opts[1] && computerSelection === opts[0]) {
+        console.log('You win!');
+    } else if (playerSelection === opts[2] && computerSelection === opts[0]) {
+        console.log('You Loose!')
+    } else if (playerSelection === opts[2] && computerSelection === opts[1]) {
+        console.log('You win!')
     }
-}
+};
 
 
 let computerPlay = () => opts[Math.floor(Math.random() * opts.length)];
