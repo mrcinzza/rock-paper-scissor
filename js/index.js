@@ -45,14 +45,14 @@ let playerSelection = "";
 var round = 0;
 
 let game = () => {
-    const rock = document.querySelector('#rock');
-    rock.onclick = () => alert("you choose rock");
+    const btnRock = document.querySelector('#btn-rock');
+    btnRock.onclick = () => alert("you choose rock");
 
-    const paper = document.querySelector('#paper');
-    paper.onclick = () => alert("you choose paper");
+    const btnPaper = document.querySelector('#btn-paper');
+    btnPaper.onclick = () => alert("you choose paper");
 
-    const scissor = document.querySelector('#scissor');
-    scissor.onclick = () => alert("you choose scissor");
+    const btnScissor = document.querySelector('#btn-scissor');
+    btnScissor.onclick = () => alert("you choose scissor");
 }
 
 
