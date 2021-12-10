@@ -45,23 +45,18 @@ let playerSelection = "";
 var round = 0;
 
 let game = () => {
+    const rock = document.querySelector('#rock');
+    rock.onclick = () => alert("you choose rock");
 
-    for (; round < 5; round++) {
-        playerSelection = prompt('Rock, Paper or Scissor?');
-        playRound(playerSelection, computerSelection);
-    }
+    const paper = document.querySelector('#paper');
+    paper.onclick = () => alert("you choose paper");
 
-    if (playerScore === computerScore) {
-        let str = 'THE GAME ENDS WITH A TIE!';
-        output(str, playerScore);
-    } else if (playerScore > computerScore) {
-        let str = '**** YOU WIN THE GAME! ****';
-        output(str, playerScore);
-    } else {
-        let str = 'YOU LOOSE THE GAME!';
-        output(str, playerScore);
-    }
+    const scissor = document.querySelector('#scissor');
+    scissor.onclick = () => alert("you choose scissor");
 }
+
+
+
 
 let output = (str, scre) => {
     const para = document.createElement('p');
