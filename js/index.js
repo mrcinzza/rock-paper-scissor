@@ -1,5 +1,4 @@
 var opts = ['rock', 'paper', 'scissors'];
-let whoWins = Boolean;
 let computerScore = 0;
 let playerScore = 0;
 
@@ -52,10 +51,10 @@ let game = () => {
         playRound(playerSelection, computerSelection);
     }
 
-    if (playerScore === computerScore){
+    if (playerScore === computerScore) {
         let str = 'THE GAME ENDS WITH A TIE!';
         output(str, playerScore);
-    } else if ( playerScore > computerScore) {
+    } else if (playerScore > computerScore) {
         let str = '**** YOU WIN THE GAME! ****';
         output(str, playerScore);
     } else {
@@ -64,10 +63,10 @@ let game = () => {
     }
 }
 
-let output = ( str, scre ) => {
+let output = (str, scre) => {
     const para = document.createElement('p');
     document.body.appendChild(para);
-    para.textContent = str+ ', Score: ' +scre;
+    para.textContent = str + ', Score: ' + scre;
 }
 
 game();
