@@ -23,10 +23,17 @@ function playRound(playerSelection, computerSelection) {
 
 
 let computerPlay = () => opts[Math.floor(Math.random() * opts.length)];
+
 const computerSelection = computerPlay();
-const playerSelection = "rock";
+const playerSelection = "";
+
+var round = 1;
+
+let game = () => {
+    for (; round < 5; round++) {
 
 
-
+    }
+}
 
 console.log(playRound(playerSelection, computerSelection));
