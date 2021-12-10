@@ -39,14 +39,16 @@ function playRound(playerSelection, computerSelection) {
 
 let computerPlay = () => opts[Math.floor(Math.random() * opts.length)];
 
-const computerSelection = computerPlay();
-let playerSelection = "";
 
 var round = 0;
 
 let game = () => {
     const btnRock = document.querySelector('#btn-rock');
-    btnRock.onclick = () => alert("you choose rock");
+    btnRock.onclick = () => {
+        let computerSelection = computerPlay();
+        let slct = "Rock"
+        playRound(slct, computerSelection);
+    }
 
     const btnPaper = document.querySelector('#btn-paper');
     btnPaper.onclick = () => alert("you choose paper");
