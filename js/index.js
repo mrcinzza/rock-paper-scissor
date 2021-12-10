@@ -1,4 +1,4 @@
-var opts = ['rock', 'paper', 'scissors'];
+var opts = ['rock', 'paper', 'scissor'];
 let computerScore = 0;
 let playerScore = 0;
 
@@ -51,10 +51,18 @@ let game = () => {
     }
 
     const btnPaper = document.querySelector('#btn-paper');
-    btnPaper.onclick = () => alert("you choose paper");
+    btnPaper.onclick = () => {
+        let computerSelection = computerPlay();
+        let slct = "Paper"
+        playRound(slct, computerSelection);
+    }
 
     const btnScissor = document.querySelector('#btn-scissor');
-    btnScissor.onclick = () => alert("you choose scissor");
+    btnScissor.onclick = () => {
+        let computerSelection = computerPlay();
+        let slct = "Scissor"
+        playRound(slct, computerSelection);
+    }
 }
 
 
