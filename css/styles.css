@@ -1,5 +1,32 @@
+.game-title {
+  color: rgb(255, 122, 20);
+}
 .content {
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+.cover-img {
+  width: 50%;
+}
+
+.margin {
+  margin: 15px;
+  cursor: pointer;
+}
+.margin:hover {
+  transform: scale(1.4);
+}
+
+footer {
+  height: 50px;
+  text-align: center;
+  color: whitesmoke;
+  background-color: rgb(255, 122, 20);
+  font-size: 14px;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
