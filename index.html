@@ -15,14 +15,26 @@
         <h1 class="game-title">Rock Paper Scissors</h1>
         <img class="cover-img" src="/assets/rock-paper-scissors.png">
         <div id="container">
-            <h2>Round:<span id="round">0</span>/5</h2>
+            <h2>Round: <span id="round">0</span></h2>
             <h3><span id="info"></span></h3>
-            <p> Player Score: <span id="p-score"></span> |.| Computer Score: <span id="c-score"></span></p>
+            <div class="game-display">
+                <div class="display-bar">
+                    <div class="p-score g-color">Player Score: <span id="p-score"></span></div>
+                    <div class="c-score g-color">Computer Score:  <span id="c-score"></span></div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="player-select">
+                    
+                </div>
+                <div id="computer-select">
+                    
+                </div>
+            </div>
         </div>
         <div class="game-controls">
-            <img id="btn-rock" class="margin" src="assets/hand-rock.png" alt="Rock" />
-            <img id="btn-paper" class="margin" src="assets/hand-paper.png" alt="Paper" />
-            <img id="btn-scissors" class="margin" src="assets/hand-scissors.png" alt="Scissors" />
+            <img id="btn-rock" class="margin" src="assets/hand-rock.png" alt="rock" />
+            <img id="btn-paper" class="margin" src="assets/hand-paper.png" alt="paper" />
+            <img id="btn-scissors" class="margin" src="assets/hand-scissors.png" alt="scissors" />
         </div>
     </div>
     <footer>
