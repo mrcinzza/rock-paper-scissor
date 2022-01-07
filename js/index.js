@@ -1,4 +1,4 @@
-var opts = ['rock', 'paper', 'scissor'];
+var opts = ['rock', 'paper', 'scissors'];
 let computerScore = 0;
 let playerScore = 0;
 let round = 0;
@@ -61,29 +61,24 @@ function playRound(playerSelection, computerSelection) {
 let computerPlay = () => opts[Math.floor(Math.random() * opts.length)];
 
 
-
 let game = () => {
 
-    const btnRock = document.querySelector('#btn-rock');
-    btnRock.onclick = () => {
+    document.querySelector('#btn-rock').addEventListener('click', function() {
         let computerSelection = computerPlay();
-        let slct = "Rock"
-        playRound(slct, computerSelection);
-    }
+        // let slct = "Rock"
+        playRound(this.alt, computerSelection);
+    });
 
-    const btnPaper = document.querySelector('#btn-paper');
-    btnPaper.onclick = () => {
+    document.querySelector('#btn-paper').addEventListener('click', function() {
         let computerSelection = computerPlay();
-        let slct = "Paper"
-        playRound(slct, computerSelection);
-    }
+        playRound(this.alt, computerSelection);
+    });
 
-    const btnScissor = document.querySelector('#btn-scissor');
-    btnScissor.onclick = () => {
+    document.querySelector('#btn-scissors').addEventListener('click', function() {
         let computerSelection = computerPlay();
-        let slct = "Scissor"
-        playRound(slct, computerSelection);
-    }
+        playRound(this.alt, computerSelection);
+    });
+
 }
 
 let output = (str, pScre, cScre, rnd) => {
