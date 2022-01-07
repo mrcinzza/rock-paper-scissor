@@ -5,26 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
     <script src="./js/index.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
     <div class="content">
-        <h1>Rock Paper Scissors</h1>
-        <img class="gm-img" src="/assets/rock-paper-scissors.png">
+        <h1 class="game-title">Rock Paper Scissors</h1>
+        <img class="cover-img" src="/assets/rock-paper-scissors.png">
         <div id="container">
             <h2>Round:<span id="round">0</span>/5</h2>
             <h3><span id="info"></span></h3>
             <p> Player Score: <span id="p-score"></span> |.| Computer Score: <span id="c-score"></span></p>
         </div>
-        <i class="fas fa-hand-rock"></i>
-        <button id="btn-paper">Paper</button>
-        <button id=btn-scissor>Scissor</button>
-        <i class="fas fa-user"></i>
+        <div class="game-controls">
+            <img id="btn-rock" class="margin" src="assets/hand-rock.png" alt="Rock" />
+            <img id="btn-paper" class="margin" src="assets/hand-paper.png" alt="Paper" />
+            <img id="btn-scissors" class="margin" src="assets/hand-scissors.png" alt="Scissors" />
+        </div>
     </div>
-
+    <footer>
+        <p> Copyright &copy; The odin Project 2022 by @mrcinzza</p>
+    </footer>
 </body>
 
 </html>
