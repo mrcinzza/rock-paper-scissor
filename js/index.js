@@ -8,8 +8,6 @@ function playRound(playerSelection, computerSelection) {
     if (computerScore < wnnrPnts && playerScore < wnnrPnts) {
         if (playerSelection.toLowerCase() === computerSelection) {
             let str = 'Its a Tie';
-            computerScore++;
-            playerScore++;
             round++;
             output(str, playerScore, computerScore, round);
         } else if (playerSelection.toLowerCase() === opts[0] && computerSelection === opts[2]) {
@@ -44,7 +42,7 @@ function playRound(playerSelection, computerSelection) {
             output(str, playerScore, computerScore, round);
         }
     } else {
-        if (computerScore === wnnrPnts ){
+        if (computerScore === wnnrPnts) {
             let str = '***** You Loose! The Computer is the winner of this session *****';
             output(str, playerScore, computerScore, round);
         } else if (playerScore === wnnrPnts) {
@@ -60,35 +58,64 @@ function playRound(playerSelection, computerSelection) {
 
 let computerPlay = () => opts[Math.floor(Math.random() * opts.length)];
 
+function imgSelection(pSelection, cSelection) {
+    switch (pSelection) {
+        case "rock":
+            document.getElementById("player-select").innerHTML="<img class=\'selection-img\' src=\'./assets/rock.png\'>"
+            break;
+        case "paper":
+            document.getElementById("player-select").innerHTML="<img class=\'selection-img\' src=\'./assets/paper.png\'>"
+            break;
+        case "scissors":
+            document.getElementById("player-select").innerHTML="<img class=\'selection-img\' src=\'./assets/scissors.png\'>"
+            break;
+    }
+
+    switch (cSelection) {
+        case "rock":
+            document.getElementById("computer-select").innerHTML="<img class=\'selection-img\' src=\'./assets/rock.png\'>"
+            break;
+        case "paper":
+            document.getElementById("computer-select").innerHTML="<img class=\'selection-img\' src=\'./assets/paper.png\'>"
+            break;
+        case "scissors":
+            document.getElementById("computer-select").innerHTML="<img class=\'selection-img\' src=\'./assets/scissors.png\'>"
+            break;
+    }
+}
 
 let game = () => {
 
-    document.querySelector('#btn-rock').addEventListener('click', function() {
+    document.querySelector('#btn-rock').addEventListener('click', function () {
         let computerSelection = computerPlay();
-        // let slct = "Rock"
-        playRound(this.alt, computerSelection);
+        let playerSelection = this.alt;
+        imgSelection(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
     });
 
-    document.querySelector('#btn-paper').addEventListener('click', function() {
+    document.querySelector('#btn-paper').addEventListener('click', function () {
         let computerSelection = computerPlay();
-        playRound(this.alt, computerSelection);
+        let playerSelection = this.alt;
+        imgSelection(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
     });
 
-    document.querySelector('#btn-scissors').addEventListener('click', function() {
+    document.querySelector('#btn-scissors').addEventListener('click', function () {
         let computerSelection = computerPlay();
-        playRound(this.alt, computerSelection);
+        let playerSelection = this.alt;
+        imgSelection(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
     });
 
 }
 
 let output = (str, pScre, cScre, rnd) => {
-
-    // document.body.appendChild(para);
-
     document.getElementById('round').innerHTML = rnd;
     document.getElementById('p-score').innerHTML = pScre;
     document.getElementById('c-score').innerHTML = cScre;
     document.getElementById('info').innerHTML = str;
+
 }
+
 
 game();
